@@ -1,3 +1,11 @@
+'''
+Модуль-генератор под названием: randomize.py
+Цель данного модуля: Генерация готовых ситуаций и их решений или иначе прецидентов для нейронной сети модуля neural.py
+Функция make_up_stuff является главной и на данный момент единственной функцией, на выходе она выдаёт:
+начальные координаты врага, игрока, а так же три переменные, составленные по подобию сигмоиды, однозначно описывающие решение.
+Функция генерирует 4 значения координат, а потом на их основе составляет решение.
+'''
+
 import random
 
 def make_up_stuff():
@@ -27,22 +35,6 @@ def make_up_stuff():
             dit_way = 1 # идём вверх ^
 
     return (pack_x, pack_y, enem_x, enem_y, should_go, dir_as, dit_way)# Write your code here :-)
-
-
-'''
-my_out = list(neural_network.think(pacman.x, pacman.y, e.x, e.y))
-
-if my_out[0] == 1:
-                if my_out[1] == 0: #Идём по х
-                    if my_out[2] == 0:#идём влево <-
-                        e.dx = math.copysign(ENEMY_SPEED*1.5, e.x - 1)
-                    else:# идём вправо ->
-                        e.dx = math.copysign(ENEMY_SPEED*1.5, e.x + 1)
-                else: #Идём по y
-                    if my_out[2] == 0:# идём вниз V
-                        e.dy = math.copysign(ENEMY_SPEED*1.5, e.y - 1)
-                    else:# идём вверх ^
-                        e.dy = math.copysign(ENEMY_SPEED*1.5, e.y + 1)# Write your code here :-)'''
 
 #neural_network = NeuralNetwork()
 #neural_network.train(10000)
